@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Dashboard</h2>
+            <ul>
+                <li><a href="#" data-target="#registrationForm">User Registration</a></li>
+                <li><a href="#" data-target="#loginForm">Login</a></li>
+                <li><a href="#" data-target="#forgotPasswordForm">Forgot Password</a></li>
+                <li><a href="#" data-target="#contactForm">Contact Us</a></li>
+                <li><a href="#" data-target="#purchaseForm">Purchase Item</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <header class="topbar">
+                <h1>Interactive Dashboard</h1>
+                <p>Welcome to the interactive project dashboard</p>
+            </header>
+
+            <section class="main-section">
+                <!-- Section Overview -->
+                <div class="overview">
+                    <div class="card">
+                        <h3>Users</h3>
+                        <p>1,230</p>
+                    </div>
+                    <div class="card">
+                        <h3>Income</h3>
+                        <p>$4,200</p>
+                    </div>
+                    <div class="card">
+                        <h3>Products Sold</h3>
+                        <p>560</p>
+                    </div>
+                </div>
+
+                <!-- Form Section -->
+                <div class="form-section">
+                    <!-- User Registration Form -->
+                    <form id="registrationForm" class="form active">
+                        <h2>User Registration</h2>
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                        <button type="submit">Register</button>
+                    </form>
+
+                    <!-- Login Form -->
+                    <form id="loginForm" class="form">
+                        <h2>Login</h2>
+                        <label for="loginUsername">Username:</label>
+                        <input type="text" id="loginUsername" name="loginUsername" required>
+                        <label for="loginPassword">Password:</label>
+                        <input type="password" id="loginPassword" name="loginPassword" required>
+                        <button type="submit">Login</button>
+                    </form>
+
+                    <!-- Forgot Password Form -->
+                    <form id="forgotPasswordForm" class="form">
+                        <h2>Forgot Password</h2>
+                        <label for="forgotEmail">Email:</label>
+                        <input type="email" id="forgotEmail" name="forgotEmail" required>
+                        <button type="submit">Reset Password</button>
+                    </form>
+
+                    <!-- Contact Us Form -->
+                    <form id="contactForm" class="form">
+                        <h2>Contact Us</h2>
+                        <label for="contactName">Name:</label>
+                        <input type="text" id="contactName" name="contactName" required>
+                        <label for="contactEmail">Email:</label>
+                        <input type="email" id="contactEmail" name="contactEmail" required>
+                        <label for="contactMessage">Message:</label>
+                        <textarea id="contactMessage" name="contactMessage" rows="4" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+
+                    <!-- Purchase Item Form -->
+                    <form id="purchaseForm" class="form">
+                        <h2>Purchase Item</h2>
+                        <label for="itemName">Item Name:</label>
+                        <input type="text" id="itemName" name="itemName" required>
+                        <label for="itemQuantity">Quantity:</label>
+                        <input type="number" id="itemQuantity" name="itemQuantity" required>
+                        <label for="itemAddress">Shipping Address:</label>
+                        <textarea id="itemAddress" name="itemAddress" rows="3" required></textarea>
+                        <button type="submit">Purchase</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
+
